@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shriram Misthan Bhandar full menu">
+<title>Shriram Misthan Bhandar | Full Menu</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#fff8f0;color:#2b1a14;line-height:1.5}
+header{background:linear-gradient(135deg,#6d0000,#b51d1d);color:#fff;text-align:center;padding:42px 16px 34px}
+.logo{width:92px;height:92px;border-radius:50%;background:#fff;color:#8b0000;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-weight:800;font-size:18px}
+h1{font-size:clamp(29px,7vw,48px);margin-bottom:7px}
+.tagline{font-size:16px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.btn{padding:12px 20px;border-radius:25px;text-decoration:none;font-weight:700}
+.whatsapp{background:#25D366;color:#fff} .call{background:#fff;color:#8b0000}
+.container{max-width:1100px;margin:auto;padding:22px 15px 60px}
+.info{text-align:center;background:#fff;border-radius:15px;padding:20px;margin:15px 0;box-shadow:0 2px 8px rgba(70,30,10,.08)}
+.search{position:sticky;top:0;z-index:5;background:#fff8f0;padding:10px 0}
+.search input{width:100%;padding:14px 16px;border:2px solid #e2c8b8;border-radius:12px;font-size:16px;outline:none}
+.categories{display:flex;gap:8px;overflow-x:auto;padding:10px 0 16px;scrollbar-width:none}
+.categories::-webkit-scrollbar{display:none}
+.cat-btn{white-space:nowrap;border:1px solid #e2c8b8;background:#fff;padding:9px 14px;border-radius:20px;cursor:pointer;color:#7b0000;font-weight:600}
+.cat-btn.active{background:#8b0000;color:#fff}
+.menu-section{margin:25px 0}
+.menu-section h2{color:#8b0000;border-bottom:2px solid #ead4c5;padding-bottom:8px;margin-bottom:14px;font-size:25px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.menu-card{background:#fff;border-radius:12px;padding:15px;display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 2px 8px rgba(70,30,10,.08);border:1px solid #f0dfd2}
+.menu-card h3{font-size:16px} .menu-card strong{color:#8b0000;font-size:18px;white-space:nowrap}
+.category{font-size:11px;color:#967b70}
+.no-results{display:none;text-align:center;padding:40px;font-size:18px}
+footer{background:#241511;color:#fff;text-align:center;padding:25px 15px}
+@media(max-width:500px){.menu-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">SMB</div>
+<h1>Shriram Misthan Bhandar</h1>
+<p class="tagline">Pure Sweets • Fresh Taste • Quality You Trust</p>
+<div class="actions">
+<a class="btn whatsapp" href="https://wa.me/919713275098?text=Hello%20Shriram%20Misthan%20Bhandar%2C%20I%20want%20to%20place%20an%20order.">Order on WhatsApp</a>
+<a class="btn call" href="tel:+919713275098">Call Now</a>
+</div>
+</header>
+<main class="container">
+<div class="info"><b>253 menu items</b><br>Browse our complete menu below.</div>
+<div class="search"><input id="search" type="search" placeholder="🔎 Search any item..." oninput="searchMenu()"></div>
+<div class="categories">
+<button class="cat-btn active" onclick="filterCategory('ALL')">All</button>
+<button class="cat-btn" onclick="filterCategory("Breakfast")">Breakfast</button>
+<button class="cat-btn" onclick="filterCategory("Combos")">Combos</button>
+<button class="cat-btn" onclick="filterCategory("Thali")">Thali</button>
+<button class="cat-btn" onclick="filterCategory("Meals")">Meals</button>
+<button class="cat-btn" onclick="filterCategory("Platter")">Platter</button>
+<button class="cat-btn" onclick="filterCategory("Sizzler")">Sizzler</button>
+<button class="cat-btn" onclick="filterCategory("Soups and Salads")">Soups and Salads</button>
+<button class="cat-btn" onclick="filterCategory("Starters")">Starters</button>
+<button class="cat-btn" onclick="filterCategory("Chaap")">Chaap</button>
+<button class="cat-btn" onclick="filterCategory("Main Course")">Main Course</button>
+<button class="cat-btn" onclick="filterCategory("Breads")">Breads</button>
+<button class="cat-btn" onclick="filterCategory("Rice and Biryani")">Rice and Biryani</button>
+<button class="cat-btn" onclick="filterCategory("South Indian")">South Indian</button>
+<button class="cat-btn" onclick="filterCategory("Dosa")">Dosa</button>
+<button class="cat-btn" onclick="filterCategory("Fried Rice and Noodles")">Fried Rice and Noodles</button>
+<button class="cat-btn" onclick="filterCategory("Pizza and Pasta")">Pizza and Pasta</button>
+<button class="cat-btn" onclick="filterCategory("Burgers and Sandwiches")">Burgers and Sandwiches</button>
+<button class="cat-btn" onclick="filterCategory("Snacks and Chaat")">Snacks and Chaat</button>
+<button class="cat-btn" onclick="filterCategory("Maggi")">Maggi</button>
+<button class="cat-btn" onclick="filterCategory("Momos")">Momos</button>
+<button class="cat-btn" onclick="filterCategory("Cakes")">Cakes</button>
+<button class="cat-btn" onclick="filterCategory("Pastries")">Pastries</button>
+<button class="cat-btn" onclick="filterCategory("Accompaniments")">Accompaniments</button>
+<button class="cat-btn" onclick="filterCategory("Dessert")">Dessert</button>
+<button class="cat-btn" onclick="filterCategory("Beverages")">Beverages</button>
+<button class="cat-btn" onclick="filterCategory("Add Ons")">Add Ons</button>
+</div>
+<div id="menu"><section class="menu-section" data-section="Breakfast">
+<h2>Breakfast</h2>
+<div class="menu-grid"><div class="menu-card" data-name="samosa (1 plate, 2 pieces)">
+  <div><h3>Samosa (1 plate, 2 pieces)</h3><span class="category">Breakfast</span></div>
+  <strong>₹52</strong>
+</div><div class="menu-card" data-name="dal kachori (1 plate)">
+  <div><h3>Dal kachori (1 plate)</h3><span class="category">Breakfast</span></div>
+  <strong>₹52</strong>
+</div><div class="menu-card" data-name="bedai (1 plate)">
+  <div><h3>Bedai (1 plate)</h3><span class="category">Breakfast</span></div>
+  <strong>₹52</strong>
+</div><div class="menu-card" data-name="pyaaz kachori (1 piece)">
+  <div><h3>Pyaaz kachori (1 piece)</h3><span class="category">Breakfast</span></div>
+  <strong>₹65</strong>
+</div><div class="menu-card" data-name="dhokla (1 piece)">
+  <div><h3>Dhokla (1 piece)</h3><span class="category">Breakfast</span></div>
+  <strong>₹32</strong>
+</div><div class="menu-card" data-name="shri ram special paneer chole bhature">
+  <div><h3>Shri Ram special paneer chole bhature</h3><span class="category">Breakfast</span></div>
+  <strong>₹220</strong>
+</div></div>
+</section><section class="menu-section" data-section="Combos">
+<h2>Combos</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg manchurian with fried rice">
+  <div><h3>Veg Manchurian with Fried Rice</h3><span class="category">Combos</span></div>
+  <strong>₹290</strong>
+</div><div class="menu-card" data-name="chilli paneer with fried rice">
+  <div><h3>Chilli Paneer with Fried Rice</h3><span class="category">Combos</span></div>
+  <strong>₹350</strong>
+</div><div class="menu-card" data-name="veg chowmein with veg manchurian">
+  <div><h3>Veg chowmein with veg manchurian</h3><span class="category">Combos</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="veg chowmein with chilli paneer">
+  <div><h3>Veg chowmein with chilli paneer</h3><span class="category">Combos</span></div>
+  <strong>₹350</strong>
+</div></div>
+</section><section class="menu-section" data-section="Thali">
+<h2>Thali</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg thali">
+  <div><h3>Veg thali</h3><span class="category">Thali</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="deluxe thali">
+  <div><h3>Deluxe thali</h3><span class="category">Thali</span></div>
+  <strong>₹420</strong>
+</div><div class="menu-card" data-name="shri ram special thali">
+  <div><h3>Shri Ram special thali</h3><span class="category">Thali</span></div>
+  <strong>₹450</strong>
+</div><div class="menu-card" data-name="rajasthani special thali">
+  <div><h3>Rajasthani special thali</h3><span class="category">Thali</span></div>
+  <strong>₹550</strong>
+</div></div>
+</section><section class="menu-section" data-section="Meals">
+<h2>Meals</h2>
+<div class="menu-grid"><div class="menu-card" data-name="amritsari naan with dal makhani">
+  <div><h3>Amritsari Naan with Dal Makhani</h3><span class="category">Meals</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="dal makhani with 2 naan">
+  <div><h3>Dal makhani with 2 naan</h3><span class="category">Meals</span></div>
+  <strong>₹210</strong>
+</div><div class="menu-card" data-name="kadhai paneer with 2 butter naan">
+  <div><h3>Kadhai paneer with 2 butter naan</h3><span class="category">Meals</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="dal makhani with rice">
+  <div><h3>Dal makhani with rice</h3><span class="category">Meals</span></div>
+  <strong>₹210</strong>
+</div><div class="menu-card" data-name="chole with rice">
+  <div><h3>Chole with rice</h3><span class="category">Meals</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="rajma with rice">
+  <div><h3>Rajma with rice</h3><span class="category">Meals</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="kadhi with rice">
+  <div><h3>Kadhi with rice</h3><span class="category">Meals</span></div>
+  <strong>₹195</strong>
+</div></div>
+</section><section class="menu-section" data-section="Platter">
+<h2>Platter</h2>
+<div class="menu-grid"><div class="menu-card" data-name="chinese platter">
+  <div><h3>Chinese platter</h3><span class="category">Platter</span></div>
+  <strong>₹290</strong>
+</div></div>
+</section><section class="menu-section" data-section="Sizzler">
+<h2>Sizzler</h2>
+<div class="menu-grid"><div class="menu-card" data-name="chinese sizzler">
+  <div><h3>Chinese sizzler</h3><span class="category">Sizzler</span></div>
+  <strong>₹335</strong>
+</div></div>
+</section><section class="menu-section" data-section="Soups and Salads">
+<h2>Soups and Salads</h2>
+<div class="menu-grid"><div class="menu-card" data-name="hot tomato soup">
+  <div><h3>Hot tomato soup</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="veg hot sour soup">
+  <div><h3>Veg hot sour soup</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹130</strong>
+</div><div class="menu-card" data-name="veg hot sweet corn soup">
+  <div><h3>Veg hot sweet corn soup</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹155</strong>
+</div><div class="menu-card" data-name="veg hot manchow soup">
+  <div><h3>Veg hot manchow soup</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹170</strong>
+</div><div class="menu-card" data-name="hot and garlic soup">
+  <div><h3>Hot and garlic soup</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="green salad">
+  <div><h3>Green salad</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="kachumber salad">
+  <div><h3>Kachumber salad</h3><span class="category">Soups and Salads</span></div>
+  <strong>₹85</strong>
+</div></div>
+</section><section class="menu-section" data-section="Starters">
+<h2>Starters</h2>
+<div class="menu-grid"><div class="menu-card" data-name="paneer tikka">
+  <div><h3>Paneer tikka</h3><span class="category">Starters</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="achari paneer tikka">
+  <div><h3>Achari paneer tikka</h3><span class="category">Starters</span></div>
+  <strong>₹286</strong>
+</div><div class="menu-card" data-name="malai paneer tikka">
+  <div><h3>Malai paneer tikka</h3><span class="category">Starters</span></div>
+  <strong>₹335</strong>
+</div><div class="menu-card" data-name="afghani paneer tikka">
+  <div><h3>Afghani paneer tikka</h3><span class="category">Starters</span></div>
+  <strong>₹335</strong>
+</div><div class="menu-card" data-name="hara bhara kabab">
+  <div><h3>Hara bhara kabab</h3><span class="category">Starters</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="dahi kabab">
+  <div><h3>Dahi kabab</h3><span class="category">Starters</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="chilli mushroom dry">
+  <div><h3>Chilli mushroom dry</h3><span class="category">Starters</span></div>
+  <strong>₹265</strong>
+</div><div class="menu-card" data-name="veg manchurian dry (8 pieces)">
+  <div><h3>Veg manchurian dry (8 pieces)</h3><span class="category">Starters</span></div>
+  <strong>₹225</strong>
+</div><div class="menu-card" data-name="chilli paneer dry">
+  <div><h3>Chilli paneer dry</h3><span class="category">Starters</span></div>
+  <strong>₹265</strong>
+</div><div class="menu-card" data-name="chilli potato">
+  <div><h3>Chilli potato</h3><span class="category">Starters</span></div>
+  <strong>₹140</strong>
+</div><div class="menu-card" data-name="honey chilli potato">
+  <div><h3>Honey chilli potato</h3><span class="category">Starters</span></div>
+  <strong>₹185</strong>
+</div><div class="menu-card" data-name="baby corn chilli">
+  <div><h3>Baby corn chilli</h3><span class="category">Starters</span></div>
+  <strong>₹265</strong>
+</div></div>
+</section><section class="menu-section" data-section="Chaap">
+<h2>Chaap</h2>
+<div class="menu-grid"><div class="menu-card" data-name="malai chaap">
+  <div><h3>Malai chaap</h3><span class="category">Chaap</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="masala chaap">
+  <div><h3>Masala chaap</h3><span class="category">Chaap</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="achari chaap">
+  <div><h3>Achari chaap</h3><span class="category">Chaap</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="afghani chaap">
+  <div><h3>Afghani chaap</h3><span class="category">Chaap</span></div>
+  <strong>₹340</strong>
+</div><div class="menu-card" data-name="shri ram special chaap">
+  <div><h3>Shri Ram special chaap</h3><span class="category">Chaap</span></div>
+  <strong>₹380</strong>
+</div></div>
+</section><section class="menu-section" data-section="Main Course">
+<h2>Main Course</h2>
+<div class="menu-grid"><div class="menu-card" data-name="dal makhani">
+  <div><h3>Dal makhani</h3><span class="category">Main Course</span></div>
+  <strong>₹270</strong>
+</div><div class="menu-card" data-name="dal fry">
+  <div><h3>Dal fry</h3><span class="category">Main Course</span></div>
+  <strong>₹150</strong>
+</div><div class="menu-card" data-name="dal tadka">
+  <div><h3>Dal tadka</h3><span class="category">Main Course</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="dal palak">
+  <div><h3>Dal palak</h3><span class="category">Main Course</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="mix dal tadka">
+  <div><h3>Mix Dal Tadka</h3><span class="category">Main Course</span></div>
+  <strong>₹225</strong>
+</div><div class="menu-card" data-name="panchmel dal">
+  <div><h3>Panchmel dal</h3><span class="category">Main Course</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="paneer kolhapuri">
+  <div><h3>Paneer Kolhapuri</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="paneer mumtaz">
+  <div><h3>Paneer mumtaz</h3><span class="category">Main Course</span></div>
+  <strong>₹360</strong>
+</div><div class="menu-card" data-name="kadhai paneer">
+  <div><h3>Kadhai paneer</h3><span class="category">Main Course</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="shahi paneer">
+  <div><h3>Shahi paneer</h3><span class="category">Main Course</span></div>
+  <strong>₹290</strong>
+</div><div class="menu-card" data-name="paneer bhurji">
+  <div><h3>Paneer bhurji</h3><span class="category">Main Course</span></div>
+  <strong>₹350</strong>
+</div><div class="menu-card" data-name="palak paneer">
+  <div><h3>Palak paneer</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="paneer lababdar">
+  <div><h3>Paneer lababdar</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="paneer butter masala">
+  <div><h3>Paneer butter masala</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="paneer do pyaaza">
+  <div><h3>Paneer do pyaaza</h3><span class="category">Main Course</span></div>
+  <strong>₹295</strong>
+</div><div class="menu-card" data-name="paneer tikka butter masala">
+  <div><h3>Paneer tikka butter masala</h3><span class="category">Main Course</span></div>
+  <strong>₹365</strong>
+</div><div class="menu-card" data-name="matar paneer">
+  <div><h3>Matar paneer</h3><span class="category">Main Course</span></div>
+  <strong>₹285</strong>
+</div><div class="menu-card" data-name="paneer hungama">
+  <div><h3>Paneer hungama</h3><span class="category">Main Course</span></div>
+  <strong>₹420</strong>
+</div><div class="menu-card" data-name="veg manchurian gravy (8 pieces)">
+  <div><h3>Veg manchurian gravy (8 pieces)</h3><span class="category">Main Course</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="chilli paneer gravy">
+  <div><h3>Chilli paneer gravy</h3><span class="category">Main Course</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="sev tamatar">
+  <div><h3>Sev tamatar</h3><span class="category">Main Course</span></div>
+  <strong>₹225</strong>
+</div><div class="menu-card" data-name="sev bhaji">
+  <div><h3>Sev bhaji</h3><span class="category">Main Course</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="bhindi masala">
+  <div><h3>Bhindi masala</h3><span class="category">Main Course</span></div>
+  <strong>₹210</strong>
+</div><div class="menu-card" data-name="kurkuri bhindi">
+  <div><h3>Kurkuri bhindi</h3><span class="category">Main Course</span></div>
+  <strong>₹250</strong>
+</div><div class="menu-card" data-name="aloo jeera">
+  <div><h3>Aloo jeera</h3><span class="category">Main Course</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="corn palak">
+  <div><h3>Corn palak</h3><span class="category">Main Course</span></div>
+  <strong>₹295</strong>
+</div><div class="menu-card" data-name="methi matar malai">
+  <div><h3>Methi matar malai</h3><span class="category">Main Course</span></div>
+  <strong>₹335</strong>
+</div><div class="menu-card" data-name="aloo matar">
+  <div><h3>Aloo matar</h3><span class="category">Main Course</span></div>
+  <strong>₹225</strong>
+</div><div class="menu-card" data-name="mushroom masala">
+  <div><h3>Mushroom masala</h3><span class="category">Main Course</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="matar mushroom">
+  <div><h3>Matar mushroom</h3><span class="category">Main Course</span></div>
+  <strong>₹295</strong>
+</div><div class="menu-card" data-name="butter soya chaap">
+  <div><h3>Butter soya chaap</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="tawa soya chaap">
+  <div><h3>Tawa soya chaap</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="malai kofta">
+  <div><h3>Malai kofta</h3><span class="category">Main Course</span></div>
+  <strong>₹299</strong>
+</div><div class="menu-card" data-name="kaju curry">
+  <div><h3>Kaju curry</h3><span class="category">Main Course</span></div>
+  <strong>₹351</strong>
+</div><div class="menu-card" data-name="navratan korma">
+  <div><h3>Navratan korma</h3><span class="category">Main Course</span></div>
+  <strong>₹410</strong>
+</div><div class="menu-card" data-name="mix veg">
+  <div><h3>Mix veg</h3><span class="category">Main Course</span></div>
+  <strong>₹295</strong>
+</div><div class="menu-card" data-name="aloo gobi">
+  <div><h3>Aloo gobi</h3><span class="category">Main Course</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="kashmiri dum aloo">
+  <div><h3>Kashmiri dum aloo</h3><span class="category">Main Course</span></div>
+  <strong>₹310</strong>
+</div><div class="menu-card" data-name="gatta masala">
+  <div><h3>Gatta masala</h3><span class="category">Main Course</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="kadhi pakoda">
+  <div><h3>Kadhi pakoda</h3><span class="category">Main Course</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="chana masala">
+  <div><h3>Chana masala</h3><span class="category">Main Course</span></div>
+  <strong>₹225</strong>
+</div></div>
+</section><section class="menu-section" data-section="Breads">
+<h2>Breads</h2>
+<div class="menu-grid"><div class="menu-card" data-name="laccha paratha">
+  <div><h3>Laccha paratha</h3><span class="category">Breads</span></div>
+  <strong>₹80</strong>
+</div><div class="menu-card" data-name="tawa paratha">
+  <div><h3>Tawa paratha</h3><span class="category">Breads</span></div>
+  <strong>₹80</strong>
+</div><div class="menu-card" data-name="aloo paratha">
+  <div><h3>Aloo paratha</h3><span class="category">Breads</span></div>
+  <strong>₹140</strong>
+</div><div class="menu-card" data-name="pyaaz paratha">
+  <div><h3>Pyaaz paratha</h3><span class="category">Breads</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="mix paratha">
+  <div><h3>Mix paratha</h3><span class="category">Breads</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="paneer paratha">
+  <div><h3>Paneer paratha</h3><span class="category">Breads</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="gobi paratha">
+  <div><h3>Gobi paratha</h3><span class="category">Breads</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="plain tandoori roti">
+  <div><h3>Plain tandoori roti</h3><span class="category">Breads</span></div>
+  <strong>₹20</strong>
+</div><div class="menu-card" data-name="butter tandoori roti">
+  <div><h3>Butter tandoori roti</h3><span class="category">Breads</span></div>
+  <strong>₹25</strong>
+</div><div class="menu-card" data-name="butter naan">
+  <div><h3>Butter naan</h3><span class="category">Breads</span></div>
+  <strong>₹85</strong>
+</div><div class="menu-card" data-name="missi roti">
+  <div><h3>Missi roti</h3><span class="category">Breads</span></div>
+  <strong>₹85</strong>
+</div><div class="menu-card" data-name="stuffed naan">
+  <div><h3>Stuffed naan</h3><span class="category">Breads</span></div>
+  <strong>₹140</strong>
+</div><div class="menu-card" data-name="garlic naan">
+  <div><h3>Garlic naan</h3><span class="category">Breads</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="plain tawa roti">
+  <div><h3>Plain tawa roti</h3><span class="category">Breads</span></div>
+  <strong>₹20</strong>
+</div><div class="menu-card" data-name="butter tawa roti">
+  <div><h3>Butter tawa roti</h3><span class="category">Breads</span></div>
+  <strong>₹25</strong>
+</div></div>
+</section><section class="menu-section" data-section="Rice and Biryani">
+<h2>Rice and Biryani</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg biryani">
+  <div><h3>Veg biryani</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="hyderabadi biryani">
+  <div><h3>Hyderabadi biryani</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="steamed rice">
+  <div><h3>Steamed rice</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="jeera rice">
+  <div><h3>Jeera rice</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹200</strong>
+</div><div class="menu-card" data-name="veg pulao">
+  <div><h3>Veg pulao</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="paneer pulao">
+  <div><h3>Paneer pulao</h3><span class="category">Rice and Biryani</span></div>
+  <strong>₹280</strong>
+</div></div>
+</section><section class="menu-section" data-section="South Indian">
+<h2>South Indian</h2>
+<div class="menu-grid"><div class="menu-card" data-name="pyaaz uttapam">
+  <div><h3>Pyaaz uttapam</h3><span class="category">South Indian</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="mix veg uttapam">
+  <div><h3>Mix veg uttapam</h3><span class="category">South Indian</span></div>
+  <strong>₹255</strong>
+</div><div class="menu-card" data-name="idli (1 plate) with sambhar">
+  <div><h3>Idli (1 plate) with sambhar</h3><span class="category">South Indian</span></div>
+  <strong>₹135</strong>
+</div><div class="menu-card" data-name="special tawa idli">
+  <div><h3>Special tawa idli</h3><span class="category">South Indian</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="vada (1 plate) with sambhar">
+  <div><h3>Vada (1 plate) with sambhar</h3><span class="category">South Indian</span></div>
+  <strong>₹160</strong>
+</div></div>
+</section><section class="menu-section" data-section="Dosa">
+<h2>Dosa</h2>
+<div class="menu-grid"><div class="menu-card" data-name="plain dosa">
+  <div><h3>Plain dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹270</strong>
+</div><div class="menu-card" data-name="masala dosa">
+  <div><h3>Masala dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="butter masala dosa">
+  <div><h3>Butter masala dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹260</strong>
+</div><div class="menu-card" data-name="mysore masala dosa">
+  <div><h3>Mysore masala dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹300</strong>
+</div><div class="menu-card" data-name="paneer dosa">
+  <div><h3>Paneer dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="pyaaz dosa">
+  <div><h3>Pyaaz dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="rava masala dosa">
+  <div><h3>Rava masala dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="rava plain dosa">
+  <div><h3>Rava plain dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="butter rava masala dosa">
+  <div><h3>Butter rava masala dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="shri ram special pizza dosa">
+  <div><h3>Shri Ram special pizza dosa</h3><span class="category">Dosa</span></div>
+  <strong>₹370</strong>
+</div></div>
+</section><section class="menu-section" data-section="Fried Rice and Noodles">
+<h2>Fried Rice and Noodles</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg fried rice">
+  <div><h3>Veg fried rice</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹260</strong>
+</div><div class="menu-card" data-name="paneer fried rice">
+  <div><h3>Paneer fried rice</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="singapuri fried rice">
+  <div><h3>Singapuri fried rice</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹300</strong>
+</div><div class="menu-card" data-name="hakka noodles">
+  <div><h3>Hakka noodles</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹245</strong>
+</div><div class="menu-card" data-name="singapuri noodles">
+  <div><h3>Singapuri noodles</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="chilli garlic noodles">
+  <div><h3>Chilli garlic noodles</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹300</strong>
+</div><div class="menu-card" data-name="chilli paneer noodles">
+  <div><h3>Chilli paneer noodles</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹300</strong>
+</div><div class="menu-card" data-name="veg chowmein">
+  <div><h3>Veg chowmein</h3><span class="category">Fried Rice and Noodles</span></div>
+  <strong>₹200</strong>
+</div></div>
+</section><section class="menu-section" data-section="Pizza and Pasta">
+<h2>Pizza and Pasta</h2>
+<div class="menu-grid"><div class="menu-card" data-name="red sauce pasta">
+  <div><h3>Red sauce pasta</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹335</strong>
+</div><div class="menu-card" data-name="white sauce pasta">
+  <div><h3>White sauce pasta</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹300</strong>
+</div><div class="menu-card" data-name="pink sauce pasta">
+  <div><h3>Pink sauce pasta</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹360</strong>
+</div><div class="menu-card" data-name="cheese pizza">
+  <div><h3>Cheese pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="otc pizza">
+  <div><h3>OTC pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹360</strong>
+</div><div class="menu-card" data-name="margherita pizza">
+  <div><h3>Margherita pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹320</strong>
+</div><div class="menu-card" data-name="mushroom pizza">
+  <div><h3>Mushroom pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹400</strong>
+</div><div class="menu-card" data-name="sweet corn pizza">
+  <div><h3>Sweet corn pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹410</strong>
+</div><div class="menu-card" data-name="chilli paneer pizza">
+  <div><h3>Chilli paneer pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹460</strong>
+</div><div class="menu-card" data-name="tomato pizza">
+  <div><h3>Tomato pizza</h3><span class="category">Pizza and Pasta</span></div>
+  <strong>₹350</strong>
+</div></div>
+</section><section class="menu-section" data-section="Burgers and Sandwiches">
+<h2>Burgers and Sandwiches</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg burger">
+  <div><h3>Veg burger</h3><span class="category">Burgers and Sandwiches</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="paneer burger">
+  <div><h3>Paneer burger</h3><span class="category">Burgers and Sandwiches</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="veg sandwich">
+  <div><h3>Veg sandwich</h3><span class="category">Burgers and Sandwiches</span></div>
+  <strong>₹110</strong>
+</div><div class="menu-card" data-name="veg cheese grilled sandwich">
+  <div><h3>Veg cheese grilled sandwich</h3><span class="category">Burgers and Sandwiches</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="chilli paneer grilled sandwich">
+  <div><h3>Chilli paneer grilled sandwich</h3><span class="category">Burgers and Sandwiches</span></div>
+  <strong>₹280</strong>
+</div></div>
+</section><section class="menu-section" data-section="Snacks and Chaat">
+<h2>Snacks and Chaat</h2>
+<div class="menu-grid"><div class="menu-card" data-name="stuffed kulcha">
+  <div><h3>Stuffed kulcha</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="dal bati churma">
+  <div><h3>Dal bati churma</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹470</strong>
+</div><div class="menu-card" data-name="paneer chilla">
+  <div><h3>Paneer chilla</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹210</strong>
+</div><div class="menu-card" data-name="butter pav bhaji">
+  <div><h3>Butter pav bhaji</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹175</strong>
+</div><div class="menu-card" data-name="rava pani pui (5 pieces)">
+  <div><h3>Rava pani pui (5 pieces)</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹40</strong>
+</div><div class="menu-card" data-name="atta pani pui (5 pieces)">
+  <div><h3>Atta pani pui (5 pieces)</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹40</strong>
+</div><div class="menu-card" data-name="raj kachori">
+  <div><h3>Raj kachori</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="katori chaat">
+  <div><h3>Katori chaat</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹140</strong>
+</div><div class="menu-card" data-name="papdi chaat">
+  <div><h3>Papdi chaat</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="dahi bhalla">
+  <div><h3>Dahi bhalla</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹140</strong>
+</div><div class="menu-card" data-name="bhalla papdi chaat">
+  <div><h3>Bhalla papdi chaat</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="sev puri">
+  <div><h3>Sev puri</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹80</strong>
+</div><div class="menu-card" data-name="dahi puri">
+  <div><h3>Dahi puri</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="bhel puri">
+  <div><h3>Bhel puri</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="aloo tikki">
+  <div><h3>Aloo tikki</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="veg spring roll">
+  <div><h3>Veg spring roll</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="chinese bhel">
+  <div><h3>Chinese bhel</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="crispy corn">
+  <div><h3>Crispy corn</h3><span class="category">Snacks and Chaat</span></div>
+  <strong>₹300</strong>
+</div></div>
+</section><section class="menu-section" data-section="Maggi">
+<h2>Maggi</h2>
+<div class="menu-grid"><div class="menu-card" data-name="plain maggi">
+  <div><h3>Plain Maggi</h3><span class="category">Maggi</span></div>
+  <strong>₹80</strong>
+</div><div class="menu-card" data-name="veg maggi">
+  <div><h3>Veg Maggi</h3><span class="category">Maggi</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="manchurian maggi">
+  <div><h3>Manchurian Maggi</h3><span class="category">Maggi</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="paneer maggi">
+  <div><h3>Paneer Maggi</h3><span class="category">Maggi</span></div>
+  <strong>₹180</strong>
+</div><div class="menu-card" data-name="cheese maggi">
+  <div><h3>Cheese Maggi</h3><span class="category">Maggi</span></div>
+  <strong>₹240</strong>
+</div></div>
+</section><section class="menu-section" data-section="Momos">
+<h2>Momos</h2>
+<div class="menu-grid"><div class="menu-card" data-name="veg steamed momos">
+  <div><h3>Veg steamed momos</h3><span class="category">Momos</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="paneer steamed momos">
+  <div><h3>Paneer steamed momos</h3><span class="category">Momos</span></div>
+  <strong>₹200</strong>
+</div><div class="menu-card" data-name="veg fried momos">
+  <div><h3>Veg fried momos</h3><span class="category">Momos</span></div>
+  <strong>₹200</strong>
+</div><div class="menu-card" data-name="paneer fried momos">
+  <div><h3>Paneer fried momos</h3><span class="category">Momos</span></div>
+  <strong>₹255</strong>
+</div><div class="menu-card" data-name="veg kurkure momos">
+  <div><h3>Veg kurkure momos</h3><span class="category">Momos</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="paneer kurkure momos">
+  <div><h3>Paneer kurkure momos</h3><span class="category">Momos</span></div>
+  <strong>₹280</strong>
+</div></div>
+</section><section class="menu-section" data-section="Cakes">
+<h2>Cakes</h2>
+<div class="menu-grid"><div class="menu-card" data-name="pineapple cake">
+  <div><h3>Pineapple Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹770</strong>
+</div><div class="menu-card" data-name="pineapple cake">
+  <div><h3>Pineapple Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹1150</strong>
+</div><div class="menu-card" data-name="chocolate cake">
+  <div><h3>Chocolate Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹770</strong>
+</div><div class="menu-card" data-name="chocolate cake">
+  <div><h3>Chocolate Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹1150</strong>
+</div><div class="menu-card" data-name="black forest cake">
+  <div><h3>Black Forest Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹770</strong>
+</div><div class="menu-card" data-name="black forest cake">
+  <div><h3>Black Forest Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹1150</strong>
+</div><div class="menu-card" data-name="red velvet cake">
+  <div><h3>Red Velvet Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹770</strong>
+</div><div class="menu-card" data-name="red velvet cake">
+  <div><h3>Red Velvet Cake</h3><span class="category">Cakes</span></div>
+  <strong>₹1150</strong>
+</div><div class="menu-card" data-name="choco chips cake (450 g)">
+  <div><h3>Choco Chips Cake (450 g)</h3><span class="category">Cakes</span></div>
+  <strong>₹770</strong>
+</div><div class="menu-card" data-name="white forest cake (450 g)">
+  <div><h3>White Forest Cake (450 g)</h3><span class="category">Cakes</span></div>
+  <strong>₹1150</strong>
+</div></div>
+</section><section class="menu-section" data-section="Pastries">
+<h2>Pastries</h2>
+<div class="menu-grid"><div class="menu-card" data-name="pineapple pastry (1 piece)">
+  <div><h3>Pineapple pastry (1 piece)</h3><span class="category">Pastries</span></div>
+  <strong>₹110</strong>
+</div><div class="menu-card" data-name="red velvet pastry (1 piece)">
+  <div><h3>Red velvet pastry (1 piece)</h3><span class="category">Pastries</span></div>
+  <strong>₹110</strong>
+</div><div class="menu-card" data-name="chocolate pastry (1 piece)">
+  <div><h3>Chocolate pastry (1 piece)</h3><span class="category">Pastries</span></div>
+  <strong>₹110</strong>
+</div><div class="menu-card" data-name="black forest pastry (1 piece)">
+  <div><h3>Black forest pastry (1 piece)</h3><span class="category">Pastries</span></div>
+  <strong>₹110</strong>
+</div><div class="menu-card" data-name="white forest pastry (1 piece)">
+  <div><h3>White forest pastry (1 piece)</h3><span class="category">Pastries</span></div>
+  <strong>₹110</strong>
+</div></div>
+</section><section class="menu-section" data-section="Accompaniments">
+<h2>Accompaniments</h2>
+<div class="menu-grid"><div class="menu-card" data-name="boondi raita">
+  <div><h3>Boondi raita</h3><span class="category">Accompaniments</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="mix raita">
+  <div><h3>Mix raita</h3><span class="category">Accompaniments</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="pineapple raita">
+  <div><h3>Pineapple raita</h3><span class="category">Accompaniments</span></div>
+  <strong>₹200</strong>
+</div><div class="menu-card" data-name="shri ram special fruit raita">
+  <div><h3>Shri Ram special fruit raita</h3><span class="category">Accompaniments</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="roasted papad">
+  <div><h3>Roasted papad</h3><span class="category">Accompaniments</span></div>
+  <strong>₹40</strong>
+</div><div class="menu-card" data-name="masala papad">
+  <div><h3>Masala papad</h3><span class="category">Accompaniments</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="fried masala papad">
+  <div><h3>Fried masala papad</h3><span class="category">Accompaniments</span></div>
+  <strong>₹135</strong>
+</div></div>
+</section><section class="menu-section" data-section="Dessert">
+<h2>Dessert</h2>
+<div class="menu-grid"><div class="menu-card" data-name="pudding (1 cup)">
+  <div><h3>Pudding (1 cup)</h3><span class="category">Dessert</span></div>
+  <strong>₹110</strong>
+</div></div>
+</section><section class="menu-section" data-section="Beverages">
+<h2>Beverages</h2>
+<div class="menu-grid"><div class="menu-card" data-name="mango tango mocktail">
+  <div><h3>Mango tango mocktail</h3><span class="category">Beverages</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="mint mocktail">
+  <div><h3>Mint mocktail</h3><span class="category">Beverages</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="blue lagoon mocktail">
+  <div><h3>Blue lagoon mocktail</h3><span class="category">Beverages</span></div>
+  <strong>₹220</strong>
+</div><div class="menu-card" data-name="fresh lime soda">
+  <div><h3>Fresh lime soda</h3><span class="category">Beverages</span></div>
+  <strong>₹100</strong>
+</div><div class="menu-card" data-name="mix soda">
+  <div><h3>Mix soda</h3><span class="category">Beverages</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="cold coffee">
+  <div><h3>Cold coffee</h3><span class="category">Beverages</span></div>
+  <strong>₹200</strong>
+</div><div class="menu-card" data-name="cold coffee with ice cream">
+  <div><h3>Cold coffee with ice cream</h3><span class="category">Beverages</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="sweet lassi">
+  <div><h3>Sweet lassi</h3><span class="category">Beverages</span></div>
+  <strong>₹120</strong>
+</div><div class="menu-card" data-name="baddam milk">
+  <div><h3>Baddam milk</h3><span class="category">Beverages</span></div>
+  <strong>₹160</strong>
+</div><div class="menu-card" data-name="pineapple shake">
+  <div><h3>Pineapple shake</h3><span class="category">Beverages</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="butterscotch shake">
+  <div><h3>Butterscotch shake</h3><span class="category">Beverages</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="strawberry shake">
+  <div><h3>Strawberry Shake</h3><span class="category">Beverages</span></div>
+  <strong>₹280</strong>
+</div><div class="menu-card" data-name="vanilla shake">
+  <div><h3>Vanilla Shake</h3><span class="category">Beverages</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="mango shake">
+  <div><h3>Mango shake</h3><span class="category">Beverages</span></div>
+  <strong>₹240</strong>
+</div><div class="menu-card" data-name="banana shake">
+  <div><h3>Banana shake</h3><span class="category">Beverages</span></div>
+  <strong>₹210</strong>
+</div><div class="menu-card" data-name="oreo shake">
+  <div><h3>Oreo shake</h3><span class="category">Beverages</span></div>
+  <strong>₹290</strong>
+</div><div class="menu-card" data-name="kitkat shake">
+  <div><h3>KitKat shake</h3><span class="category">Beverages</span></div>
+  <strong>₹290</strong>
+</div><div class="menu-card" data-name="tutti frutti shake">
+  <div><h3>Tutti frutti shake</h3><span class="category">Beverages</span></div>
+  <strong>₹290</strong>
+</div><div class="menu-card" data-name="badam shake">
+  <div><h3>Badam shake</h3><span class="category">Beverages</span></div>
+  <strong>₹290</strong>
+</div></div>
+</section><section class="menu-section" data-section="Add Ons">
+<h2>Add Ons</h2>
+<div class="menu-grid"><div class="menu-card" data-name="butter pav">
+  <div><h3>Butter pav</h3><span class="category">Add Ons</span></div>
+  <strong>₹39</strong>
+</div><div class="menu-card" data-name="bhaji">
+  <div><h3>Bhaji</h3><span class="category">Add Ons</span></div>
+  <strong>₹39</strong>
+</div><div class="menu-card" data-name="paneer pulao">
+  <div><h3>Paneer pulao</h3><span class="category">Add Ons</span></div>
+  <strong>₹182</strong>
+</div><div class="menu-card" data-name="baddam milk">
+  <div><h3>Baddam milk</h3><span class="category">Add Ons</span></div>
+  <strong>₹104</strong>
+</div><div class="menu-card" data-name="strawberry shake">
+  <div><h3>Strawberry Shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹182</strong>
+</div><div class="menu-card" data-name="fresh lime soda">
+  <div><h3>Fresh lime soda</h3><span class="category">Add Ons</span></div>
+  <strong>₹65</strong>
+</div><div class="menu-card" data-name="veg biryani">
+  <div><h3>Veg biryani</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="mint mocktail">
+  <div><h3>Mint mocktail</h3><span class="category">Add Ons</span></div>
+  <strong>₹143</strong>
+</div><div class="menu-card" data-name="tutti frutti shake">
+  <div><h3>Tutti frutti shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="veg maggi">
+  <div><h3>Veg Maggi</h3><span class="category">Add Ons</span></div>
+  <strong>₹78</strong>
+</div><div class="menu-card" data-name="pineapple shake">
+  <div><h3>Pineapple shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="mix soda">
+  <div><h3>Mix soda</h3><span class="category">Add Ons</span></div>
+  <strong>₹78</strong>
+</div><div class="menu-card" data-name="vanilla shake">
+  <div><h3>Vanilla Shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="mango shake">
+  <div><h3>Mango shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="blue lagoon mocktail">
+  <div><h3>Blue lagoon mocktail</h3><span class="category">Add Ons</span></div>
+  <strong>₹143</strong>
+</div><div class="menu-card" data-name="veg pulao">
+  <div><h3>Veg pulao</h3><span class="category">Add Ons</span></div>
+  <strong>₹143</strong>
+</div><div class="menu-card" data-name="cold coffee">
+  <div><h3>Cold coffee</h3><span class="category">Add Ons</span></div>
+  <strong>₹130</strong>
+</div><div class="menu-card" data-name="butterscotch shake">
+  <div><h3>Butterscotch shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="jeera rice">
+  <div><h3>Jeera rice</h3><span class="category">Add Ons</span></div>
+  <strong>₹130</strong>
+</div><div class="menu-card" data-name="badam shake">
+  <div><h3>Badam shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹208</strong>
+</div><div class="menu-card" data-name="mango tango mocktail">
+  <div><h3>Mango tango mocktail</h3><span class="category">Add Ons</span></div>
+  <strong>₹143</strong>
+</div><div class="menu-card" data-name="kitkat shake">
+  <div><h3>KitKat shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="plain maggi">
+  <div><h3>Plain Maggi</h3><span class="category">Add Ons</span></div>
+  <strong>₹52</strong>
+</div><div class="menu-card" data-name="paneer maggi">
+  <div><h3>Paneer Maggi</h3><span class="category">Add Ons</span></div>
+  <strong>₹117</strong>
+</div><div class="menu-card" data-name="banana shake">
+  <div><h3>Banana shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹143</strong>
+</div><div class="menu-card" data-name="oreo shake">
+  <div><h3>Oreo shake</h3><span class="category">Add Ons</span></div>
+  <strong>₹195</strong>
+</div><div class="menu-card" data-name="steamed rice">
+  <div><h3>Steamed rice</h3><span class="category">Add Ons</span></div>
+  <strong>₹104</strong>
+</div><div class="menu-card" data-name="sweet lassi">
+  <div><h3>Sweet lassi</h3><span class="category">Add Ons</span></div>
+  <strong>₹78</strong>
+</div><div class="menu-card" data-name="hyderabadi biryani">
+  <div><h3>Hyderabadi biryani</h3><span class="category">Add Ons</span></div>
+  <strong>₹208</strong>
+</div><div class="menu-card" data-name="cold coffee with ice cream">
+  <div><h3>Cold coffee with ice cream</h3><span class="category">Add Ons</span></div>
+  <strong>₹182</strong>
+</div><div class="menu-card" data-name="cheese maggi">
+  <div><h3>Cheese Maggi</h3><span class="category">Add Ons</span></div>
+  <strong>₹156</strong>
+</div><div class="menu-card" data-name="manchurian maggi">
+  <div><h3>Manchurian Maggi</h3><span class="category">Add Ons</span></div>
+  <strong>₹104</strong>
+</div><div class="menu-card" data-name="pudding (1 cup)">
+  <div><h3>Pudding (1 cup)</h3><span class="category">Add Ons</span></div>
+  <strong>₹60</strong>
+</div><div class="menu-card" data-name="1 bhature">
+  <div><h3>1 Bhature</h3><span class="category">Add Ons</span></div>
+  <strong>₹39</strong>
+</div><div class="menu-card" data-name="chole">
+  <div><h3>Chole</h3><span class="category">Add Ons</span></div>
+  <strong>₹52</strong>
+</div></div>
+</section></div>
+<div id="noResults" class="no-results">No menu item found.</div>
+<div class="info">
+<h2>Our Branches</h2>
+<p><b>Branch 1:</b> Gole Ka Mandir Rd, Mela Ground, Morar, Gwalior, Madhya Pradesh 474005</p><br>
+<p><b>Branch 2:</b> RC Complex, Opposite Railway Crossing, Near Homeguard Office, Bahodapur, Gwalior</p><br>
+<p>📞 9713275098 &nbsp; | &nbsp; 9111333081</p>
+</div>
+</main>
+<footer>© 2026 Shriram Misthan Bhandar • All Rights Reserved</footer>
+<script>
+function filterCategory(cat){
+ document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+ const b=[...document.querySelectorAll('.cat-btn')].find(x=>x.textContent.trim()===cat);
+ if(b)b.classList.add('active');
+ document.getElementById('search').value='';
+ document.querySelectorAll('.menu-section').forEach(s=>s.style.display=(cat==='ALL'||s.dataset.section===cat)?'block':'none');
+ document.querySelectorAll('.menu-card').forEach(c=>c.style.display='flex');
+ document.getElementById('noResults').style.display='none';
+}
+function searchMenu(){
+ const q=document.getElementById('search').value.toLowerCase().trim(); let found=0;
+ document.querySelectorAll('.menu-section').forEach(s=>{
+  let n=0;
+  s.querySelectorAll('.menu-card').forEach(c=>{
+   const ok=!q||c.dataset.name.includes(q); c.style.display=ok?'flex':'none'; if(ok){n++;found++;}
+  });
+  s.style.display=n?'block':'none';
+ });
+ document.getElementById('noResults').style.display=found?'none':'block';
+ document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+}
+</script>
+</body>
+</html>
